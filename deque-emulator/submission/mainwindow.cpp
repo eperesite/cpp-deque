@@ -1,9 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-//#include <iostream>
 #include <QString>
-#include <QMessageBox>
 #include <QFileDialog>
 #include <QTextStream>
 #include <string.h>
@@ -214,13 +212,9 @@ void MainWindow::on_max_element_clicked()
 
 void MainWindow::on_btn_sort_clicked()
 {
-
-    std::deque<std::string> tmp  = deque_model_.items;
-    tmp =  MergeSort ( tmp, std::less());
-    deque_model_.items.swap(tmp);
+    std::sort(deque_model_.items.begin(), deque_model_.items.end(), std::less());
     deque_model_.iterator = deque_model_.items.begin();
     ApplyModel();
-
 }
 
 

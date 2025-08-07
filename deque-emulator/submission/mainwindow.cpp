@@ -2,12 +2,8 @@
 #include "ui_mainwindow.h"
 
 #include <QString>
-#include <QFileDialog>
-#include <QTextStream>
-#include <string.h>
 
 #include <random>
-#include <QInputDialog>
 #include <deque>
 #include <algo.h>
 
